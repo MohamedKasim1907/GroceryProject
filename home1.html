@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script>
+    let bodyt=document.getElementsByTagName("body")
+    bodyt[0].setAttribute(
+      "style",
+      " height:200vh;transition:all 2s;background-image: url(./img/bg.webp);background-size: cover;background-repeat:no-repeat;background-position: center;"
+    );
+    bodyt[0].style.margin = "0";
+    let header = document.createElement("header");
+    header.setAttribute(
+      "style",
+      "z-index:4;top:0px;position:sticky;padding:10px;display: flex; justify-content: space-between;align-items:center;background:black"
+    );
+    let h1 = document.createElement("h1");
+    h1.textContent = "Grocery";
+    h1.style.color = "white";
+    let a1 = document.createElement("a");
+    //a1.textContent = "Login";
+    a1.setAttribute("style", "text-decoration:none;font-size:50px");
+    a1.setAttribute("class", "fa fa-sign-in");
+    a1.setAttribute("href", "/login");
+    a1.style.color = "white";
+    let cc=document.createElement("div");
+    cc.setAttribute("style","display:flex;gap:100px;align-items:center;")
+    let cc1=document.createElement("div");
+    cc1.setAttribute("style","display:flex;")
+    let a2 = document.createElement("p");
+    a2.setAttribute("href", "#");
+ 
+   a2.setAttribute("class","fa fa-shopping-cart") 
+   a2.setAttribute("style","position:relative;z-index:2;color:red;font-size:50px;top:0") 
+   a2.id="cartt"
+   a2.addEventListener("click",()=>{
+    
+    if (ccon.style.left === "-1000px") 
+      {
+          ccon.style.left="0px"
+          a2.style.color="green"
+          ocon.style.right="-1000px"
+          a3.style.color="red"
+          ccon.style.transition="all 1.5s"
+         
+      }
+     else{
+        ccon.style.left="-1000px"
+        a2.style.color="red"
+        
+      }
+   })
+   let a2c = document.createElement("div");
+   a2c.id="counter"
+   a2c.textContent=0
+   a2c.setAttribute("style","position:relative;top:15px;z-index:1;right:20px;text-align:center;height:50px;width:50px;border-radius:50%;background:white;color:red;font-size:30px;font-weight:bold;")
+   let ccon=document.createElement("div");
+ 
+   ccon.setAttribute("style","overflow-y: auto;z-index:2;transition:all 1s;left:-1000px;justify-content:center;width:1000px;height:100vh;background:rgba(0, 0, 0, 0.9);position:absolute;top:170px");
+   let ccall=document.createElement("div")
+   ccall.setAttribute("style","")
+   let ch1=document.createElement("h1");
+   let ctitle=document.createElement("div");
+   ctitle.textContent="img name amt"
+   ctitle.setAttribute("style","text-align:center;color:white")
+   ch1.textContent="Cart List"
+   ch1.setAttribute("style","text-align:center;color:white")
+   ccon.appendChild(ch1);
+   ccon.appendChild(ctitle);
+   
+   let a3 = document.createElement("p");
+  a3.setAttribute("class","fa fa-shopping-basket") 
+   a3.setAttribute("style","color:red;font-size:50px;z-index:2") 
+
+   a3.addEventListener("click",()=>{
+    
+    if (ocon.style.right === "-1000px") 
+    {
+        ocon.style.right="0px"
+        a3.style.color="green"
+        ccon.style.left="-1000px"
+        a2.style.color="red"
+        ocon.style.transition="all 1.5s"
+       
+    }
+   else{
+      ocon.style.right="-1000px"
+      a3.style.color="red"
+      
+    }
+ })
+ let cc2=document.createElement("div");
+ cc2.setAttribute("style","display:flex;")
+ let a3c = document.createElement("div");
+   a3c.id="counter"
+   a3c.textContent=0
+   a3c.setAttribute("style","position:relative;top:15px;z-index:1;right:20px;text-align:center;height:50px;width:50px;border-radius:50%;background:white;color:blue;font-size:30px;font-weight:bold;")
+   let ocon=document.createElement("div")
+   ocon.setAttribute("style","overflow-y: auto;z-index:2;transition:all 1s;right:-1000px;justify-content:center;width:1000px;height:100vh;background:rgba(0, 0, 0, 0.9);position:absolute;top:170px");
+   let oh1=document.createElement("h1");
+   let otitle=document.createElement("div");
+   otitle.textContent="img name amt"
+   otitle.setAttribute("style","text-align:center;color:white")
+   oh1.textContent="Order List"
+   oh1.setAttribute("style","text-align:center;color:white")
+   ocon.appendChild(oh1);
+   ocon.appendChild(otitle);
+   
+   let s = document.createElement("a");
+   s.setAttribute("href", "ser.html");
+s.setAttribute("class","fa fa-truck") 
+  s.setAttribute("style","position:relative;z-index:2;color:red;font-size:50px;top:0") 
+  
+  
+  let c = document.createElement("a");
+  c.setAttribute("href", "cont.html");
+c.setAttribute("class","fa fa-comments") 
+ c.setAttribute("style","text-decoration:none;position:relative;z-index:2;color:red;font-size:50px;top:0") 
+ 
+   header.appendChild(h1);
+   cc.appendChild(s);
+   cc.appendChild(c)
+   cc1.appendChild(a2);
+    cc1.appendChild(a2c);
+    cc.appendChild(cc1);
+    cc2.appendChild(a3);
+   //cc2.appendChild(a3c);
+    cc.appendChild(cc2);
+    //cc.appendChild(a1);
+    header.appendChild(cc);
+    //header.appendChild(a1);
+    bodyt[0].appendChild(header);
+  
+   
+
+    //header end
+    //main start
+    //adsposter
+    let post=document.createElement("div");
+    post.setAttribute("style","position:relative;overflow:hidden;display:flex;width:100%;height:500px;background:yellow")
+
+    let pimg1=document.createElement("img");
+    pimg1.src="./img/post.png"
+   // pimg1.setAttribute("style","width:500px;flex-grow:3")
+    let pimg2=document.createElement("img");
+    pimg2.src="./img/post1.jpg"
+    pimg2.setAttribute("style","width:100%;")
+    let pimg3=document.createElement("img");
+    pimg3.src="./img/post2.jpg"
+   // pimg3.setAttribute("style","width:500px;flex-grow:1")
+   let pimg4=document.createElement("img");
+    pimg4.setAttribute("style","display:none;")
+    pimg4.src="./img/post3.jpg"
+    let ppbtn=document.createElement("button");
+    ppbtn.setAttribute("class","fa fa-chevron-left")
+ ppbtn.setAttribute("style","color:rgba(255, 255, 255, 0.5);align-self:center;position:absolute;left:50px;z-index:1;padding:10px;background:transparent;border:none;font-size:50px")
+ ppbtn.addEventListener("mouseenter",()=>{
+  ppbtn.style.color="white"
+})
+ppbtn.addEventListener("mouseout",()=>{
+  ppbtn.style.color="rgba(255, 255, 255, 0.5)"
+})
+ ppbtn.addEventListener("click",()=>{
+  
+  pimg2.style.display="block"
+  pimg2.style.width="100%"
+ 
+  pimg4.style.display="none"
+ })
+ let pnbtn=document.createElement("button");
+pnbtn.setAttribute("class","fa fa-chevron-right")
+ pnbtn.setAttribute("style","color:rgba(255, 255, 255, 0.5);align-self:center;position:absolute;right:50px;z-index:1;padding:10px;background:transparent;border:none;font-size:50px")
+ pnbtn.addEventListener("mouseenter",()=>{
+  pnbtn.style.color="white"
+})
+pnbtn.addEventListener("mouseout",()=>{
+  pnbtn.style.color="rgba(255, 255, 255, 0.5)"
+})
+   pnbtn.addEventListener("click",()=>{
+   pimg4.style.display="block"
+   pimg4.style.width="100%"
+ 
+   pimg2.style.display="none"
+   })
+   post.appendChild(ppbtn)
+    //post.appendChild(pimg1)
+    post.appendChild(pimg2)
+    //post.appendChild(pimg3)
+    post.appendChild(pimg4)
+    
+    post.appendChild(pnbtn)
+    bodyt[0].appendChild(post)
+    //posterads
+    let h1l = document.createElement("h1");
+    //h1l.textContent = "Products";
+    h1l.setAttribute(
+      "style",
+      "text-align:center;color:white;font-size:103px;font-weight:bold;background: rgba(0, 0, 0, 0.5);"
+    );
+    bodyt[0].appendChild(h1l);
+    let fcon = document.createElement("div");
+
+    fcon.setAttribute(
+      "style",
+      "margin:10px 300px;display:block;justify-content:center;align-items:center;"
+    );
+    let fdiv = document.createElement("div");
+    fdiv.setAttribute(
+      "style",
+      "display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding:10px;background: transparent;border-radius:30px;"
+    );
+    
+    let gcon = document.createElement("div");
+
+    gcon.setAttribute(
+      "style",
+      "margin:10px 300px;display:block;justify-content:center;align-items:center;"
+    );
+    let gdiv = document.createElement("div");
+    gdiv.setAttribute(
+      "style",
+      "display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding:10px;background: transparent;border-radius:30px;"
+    );
+    let Vcon = document.createElement("div");
+
+    Vcon.setAttribute(
+      "style",
+      "margin:10px 300px;display:block;justify-content:center;align-items:center;"
+    );
+    let Vdiv = document.createElement("div");
+    Vdiv.setAttribute(
+      "style",
+      "overflow:hidden;display:flex;justify-content:center;align-items:center;padding:10px;background:transparent;border-radius:30px;"
+    );
+    let fh1 = document.createElement("h1");
+    fh1.textContent = "Fruits";
+    fh1.setAttribute("style","color:white;text-align:center;font-size:100px;font-weight:bold;background:rgba(0, 0, 0, 0.5);border-radius:30px")
+    let gh1 = document.createElement("h1");
+    gh1.textContent = "Grocery";
+    gh1.setAttribute("style","color:white;text-align:center;font-size:100px;font-weight:bold;background:rgba(0, 0, 0, 0.5);border-radius:30px")
+
+    let vh1 = document.createElement("h1");
+    vh1.textContent = "Vegetable";
+    vh1.setAttribute("style","color:white;text-align:center;font-size:100px;font-weight:bold;background:rgba(0, 0, 0, 0.5);border-radius:30px")
+
+    let cardValue = [
+   
+    {
+      url: "./img/t.jpeg",
+      name: "Tomato(1KG)",
+      sym: "₹.",
+      amount: 90,
+      bname: "fa fa-shopping-cart",
+      category:"Vegetable"
+     },
+    {
+      url: "./img/p.jpeg",
+      name: "Potato(1KG)",
+      sym: "₹.",
+      amount: 60,
+      bname: "fa fa-shopping-cart",
+      category: "Vegetable"
+    },
+    {
+      url: "./img/o.jpeg",
+      name: "Onion(1KG)",
+      sym: "₹.",
+      amount: 309,
+      bname: "fa fa-shopping-cart",
+      category: "Vegetable"
+    },
+    {
+      url: "./img/fl.jpeg",
+      name: "Flour(1KG)",
+      sym: "₹.",
+      amount: 30,
+      bname: "fa fa-shopping-cart",
+      category: "Grocery"
+    },
+    {
+      url: "./img/egg.jpg",
+      name: "Egg(10PCs)",
+      sym: "₹.",
+      amount: 30,
+      bname: "fa fa-shopping-cart",
+      category: "Grocery"
+    },
+    {
+      url: "./img/oil.jpg",
+      name: "Oil(1Ltr)",
+      sym: "₹.",
+      amount: 34,
+      bname: "fa fa-shopping-cart",
+      category: "Grocery"
+    },
+    {
+      url: "./img/apple.jpeg",
+      name: "Apple(1KG)",
+      sym: "₹.",
+      amount: 150,
+      bname: "fa fa-shopping-cart",
+      category: "Fruits"
+    },
+    {
+      url: "./img/d.jpeg",
+      name: "Dal(1KG)",
+      sym: "₹.",
+      amount: 200,
+      bname: "fa fa-shopping-cart",
+      category: "Grocery"
+    },
+    {
+      url: "./img/rr.jpeg",
+      name: "Orange(1KG)",
+      sym: "₹.",
+      amount: 340,
+      bname: "fa fa-shopping-cart",
+      category: "Fruits"
+    },
+    {
+      url: "./img/grr.avif",
+      name: "Grapes(1KG)",
+      sym: "₹.",
+      amount: 380,
+      bname: "fa fa-shopping-cart",
+      category: "Fruits"
+    }, 
+  ];
+  cardValue.forEach((item) => {
+    if(item.category==="Fruits"){
+    const card = document.createElement("div");
+    card.setAttribute("id", "con");
+    card.style.backgroundColor = "yellow";
+    card.setAttribute(
+      "style",
+      "transition:all 1s;margin:10px;background:white;width: 150px;border-radius:30px;overflow:hidden"
+    );
+    card.classList.add("card");
+ 
+    let img = document.createElement("img");
+    img.setAttribute("src", item.url);
+    img.id = "img1";
+    img.setAttribute("style", "height: 130px; width: 100%;");
+    let pname = document.createElement("h3");
+    pname.setAttribute("id", "pn");
+    pname.setAttribute("style", "color:red;font-weight:bold");
+    let amt = document.createElement("p");
+    amt.id = "amt1";
+
+    let divamt = document.createElement("div");
+    divamt.setAttribute(
+      "style",
+      "display:flex;font-size:20px;font-weight:bold"
+    );
+    let sy = document.createElement("p");
+    var btn1 = document.createElement("button");
+    btn1.setAttribute(
+      "style",
+      "width:100%;background-color:green;font-size:30px"
+    );
+    btn1.id = "b1";
+    pname.textContent = item.name;
+    pname.id = "pn1";
+    amt.textContent = item.amount;
+   
+    btn1.setAttribute("class", item.bname);
+    sy.textContent = item.sym;
+    card.addEventListener("mouseover", () => {
+      card.style.transform = `rotateY(${360}deg)`;
+     // card.style.transform=`translateY(${-20}px)`
+     // card.style.borderRadius="100%"
+    });
+    card.addEventListener("mouseout", () => {
+      card.style.transform = `rotateY(${0}deg)`;
+      //card.style.transform=`translateY(${0}px)`
+     // card.style.borderRadius="30px"
+    });
+    card.appendChild(img);
+    card.appendChild(pname);
+    divamt.appendChild(sy);
+    divamt.appendChild(amt);
+    card.appendChild(divamt);
+    card.appendChild(btn1);
+    fdiv.appendChild(fh1);
+    fdiv.appendChild(card);
+    fcon.appendChild(fh1);
+    fcon.appendChild(fdiv);
+    
+    bodyt[0].appendChild(fcon);
+    
+  
+   btn1.addEventListener("click", () => {
+    let ccall=document.createElement("div")
+    ccall.setAttribute("style","background:green")
+     
+    let ccard=document.createElement("div")
+        ccard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+        let cimg=document.createElement("img")
+        cimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+        let cpname=document.createElement("h1")
+        let cdivamt=document.createElement("div")
+        cdivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+        let csym=document.createElement("p")
+        let camt=document.createElement("p")
+        
+        let cinput=document.createElement("input")
+        cinput.min=1;
+        cinput.value=1;
+        cinput.setAttribute("type","number")
+        cinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+        let cp=document.createElement("p")
+      
+        cp.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+        let cbtn=document.createElement("button")
+        cbtn.setAttribute("class", "fa fa-trash");
+        cbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+        cbtn.addEventListener("click",()=>{
+            ccard.remove();
+            let isClicked=false
+             if(!isClicked){
+              alert("Confirm to Remove 🤔❓");
+              btn1.disabled =false;
+              a2c.innerHTML = parseInt(a2c.innerHTML) - 1;
+            }
+        })
+        function ChangeCP(){
+        let i = parseInt(cinput.value);
+        let amount = parseInt(camt.textContent);
+        if(i>0){
+          cp.textContent="₹."+amount*i
+         
+        }
+        else if(i=null){
+          i.value=1
+        }
+       
+       console.log(t.textContent)
+      }
+      cinput.addEventListener("input",ChangeCP)
+      
+       
+        ChangeCP();
+     
+        cimg.src=img.src;
+        cpname.textContent=pname.textContent;
+        csym.textContent=sy.textContent;
+        camt.textContent=amt.textContent;
+        cp.textContent="₹."+camt.textContent
+      t.textContent=cp.textContent
+       rbtn.addEventListener("click",()=>{
+            ccall.remove();
+            let isClicked = false;
+            if (!isClicked) {
+             
+             btn1.disabled = false;
+            a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);
+            a2c.innerHTML = 0
+            }
+        })
+        obtn.addEventListener("click",()=>{
+         
+         // ocon.textContent="orderlist"
+         /*let ocard=document.createElement("div")
+         ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+         let oimg=document.createElement("img")
+         oimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+         let opname=document.createElement("h1")
+         let odivamt=document.createElement("div")
+         odivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+         let osym=document.createElement("p")
+         let oamt=document.createElement("p")
+         
+         let oinput=document.createElement("p")
+         //oinput.min=1;
+         //oinput.value=1;
+         oinput.setAttribute("type","number")
+         oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+         let op=document.createElement("p")
+       
+         op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+         oimg.src=cimg.src
+         opname.textContent=cpname.textContent
+         oamt.textContent="₹."+camt.textContent
+         oinput.textContent="Qty:"+cinput.value
+         op.textContent=cp.textContent
+         ocard.appendChild(oimg);
+         ocard.appendChild(opname);
+         odivamt.appendChild(osym);
+         odivamt.appendChild(oamt);
+         ocard.appendChild(odivamt);
+         ocard.appendChild(oinput)
+         ocard.appendChild(op)
+         ocon.appendChild(ocard)
+          bodyt[0].appendChild(ocon)
+         
+          let isClicked = false;
+          if (!isClicked) {
+            a3c.innerHTML =parseInt(a3c.innerHTML) + 1
+            a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);    
+            a2c.innerHTML =0
+            ccard.remove()
+            btn1.disabled=false
+            
+          }*/
+          let ocard=document.createElement("div")
+          ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+         let rrbtn=document.createElement("button")
+          rrbtn.setAttribute("class", "fa fa-trash");
+          rrbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+          rrbtn.addEventListener("click",()=>{
+           ocard.remove()
+          })
+          let oinput=document.createElement("p")
+          oinput.setAttribute("type","number")
+          oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+          oinput.textContent="Qty:"+cinput.value
+          let op=document.createElement("p")
+          op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+          op.textContent=cp.textContent
+          ocard.appendChild(cimg)
+          ocard.appendChild(cpname)
+          ocard.appendChild(cdivamt)
+          ocard.appendChild(oinput)
+          ocard.appendChild(op)
+          ocard.appendChild(rrbtn)
+          ocon.appendChild(ocard)
+          bodyt[0].appendChild(ocon)
+          
+          // let isClicked = false;
+        //   if (!isClicked) {
+             //a3c.innerHTML =parseInt(a3c.innerHTML) + 1
+             //a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);    
+             a2c.innerHTML =0
+            ccall.remove()
+             btn1.disabled=false
+           
+             
+          // }
+        })
+        
+       // t.textContent=cp.textContent
+        ccard.appendChild(cimg);
+        ccard.appendChild(cpname);
+        cdivamt.appendChild(csym);
+        cdivamt.appendChild(camt);
+        ccard.appendChild(cdivamt);
+        ccard.appendChild(cinput)
+        ccard.appendChild(cp)
+        ccard.appendChild(cbtn);
+       
+        ccall.appendChild(ccard);
+        ccon.appendChild(ccall) 
+        ccon.appendChild(tcard) 
+        btnd.appendChild(obtn) 
+        btnd.appendChild(rbtn) 
+        ccon.appendChild(btnd) 
+        bodyt[0].appendChild(ccon);
+    
+       let isClicked = false;
+       if (!isClicked) {
+        alert(pname.textContent + "---Sucessfully Added✔️✔️✔️");
+
+        btn1.disabled = true;
+       a2c.innerHTML = parseInt(a2c.innerHTML) + 1;
+       
+      } 
+
+   
+   })
+  }   
+  else if(item.category==="Grocery"){
+    const card = document.createElement("div");
+    card.setAttribute("id", "con");
+    card.style.backgroundColor = "yellow";
+    card.setAttribute(
+      "style",
+      "transition:all 1s;margin:10px;background:white;width: 150px;border-radius:30px;overflow:hidden"
+    );
+    card.classList.add("card");
+ 
+    let img = document.createElement("img");
+    img.setAttribute("src", item.url);
+    img.id = "img1";
+    img.setAttribute("style", "height: 130px; width: 100%;");
+    let pname = document.createElement("h3");
+    pname.setAttribute("id", "pn");
+    pname.setAttribute("style", "color:red;font-weight:bold");
+    let amt = document.createElement("p");
+    amt.id = "amt1";
+
+    let divamt = document.createElement("div");
+    divamt.setAttribute(
+      "style",
+      "display:flex;font-size:20px;font-weight:bold"
+    );
+    let sy = document.createElement("p");
+    var btn1 = document.createElement("button");
+    btn1.setAttribute(
+      "style",
+      "width:100%;background-color:green;font-size:30px"
+    );
+    btn1.id = "b1";
+    pname.textContent = item.name;
+    pname.id = "pn1";
+    amt.textContent = item.amount;
+   
+    btn1.setAttribute("class", item.bname);
+    sy.textContent = item.sym;
+    card.addEventListener("mouseover", () => {
+      card.style.transform = `rotateY(${360}deg)`;
+     // card.style.transform=`translateY(${-20}px)`
+     // card.style.borderRadius="100%"
+    });
+    card.addEventListener("mouseout", () => {
+     // card.style.transform=`translateY(${0}px)`
+      card.style.transform = `rotateY(${0}deg)`;
+     // card.style.borderRadius="30px"
+    });
+    card.appendChild(img);
+    card.appendChild(pname);
+    divamt.appendChild(sy);
+    divamt.appendChild(amt);
+    card.appendChild(divamt);
+    card.appendChild(btn1);
+
+    gdiv.appendChild(card);
+    gcon.appendChild(gh1);
+    gcon.appendChild(gdiv);
+    bodyt[0].appendChild(gcon);
+    
+  
+   btn1.addEventListener("click", () => {
+    let ccall=document.createElement("div")
+    ccall.setAttribute("style","background:green")
+     
+    let ccard=document.createElement("div")
+        ccard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+        let cimg=document.createElement("img")
+        cimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+        let cpname=document.createElement("h1")
+        let cdivamt=document.createElement("div")
+        cdivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+        let csym=document.createElement("p")
+        let camt=document.createElement("p")
+        
+        let cinput=document.createElement("input")
+        cinput.min=1;
+        cinput.value=1;
+        cinput.setAttribute("type","number")
+        cinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+        let cp=document.createElement("p")
+      
+        cp.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+        let cbtn=document.createElement("button")
+        cbtn.setAttribute("class", "fa fa-trash");
+        cbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+        cbtn.addEventListener("click",()=>{
+            ccard.remove();
+            let isClicked=false
+            
+            if(a2c.innerHTML<0){
+              a2c.innerHTML=0
+            }
+            else if(!isClicked && a2c.innerHTML===0){
+              alert("Confirm to Remove 🤔❓");
+              btn1.disabled =false;
+              a2c.innerHTML = parseInt(a2c.innerHTML) - 1;
+            }
+        })
+        function ChangeCP(){
+        let i = parseInt(cinput.value);
+        let amount = parseInt(camt.textContent);
+        if(i>0){
+          cp.textContent="₹."+amount*i
+        }
+        else if(i=null){
+          i.value=1
+        }
+       
+       
+      }
+      cinput.addEventListener("input",ChangeCP)
+      
+       
+        ChangeCP();
+     
+        cimg.src=img.src;
+        cpname.textContent=pname.textContent;
+        csym.textContent=sy.textContent;
+        camt.textContent=amt.textContent;
+        cp.textContent="₹."+camt.textContent
+       rbtn.addEventListener("click",()=>{
+            ccall.remove();
+            let isClicked = false;
+            if (!isClicked) {
+             
+             btn1.disabled = false;
+            a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);
+            a2c.innerHTML = 0
+            }
+        })
+        obtn.addEventListener("click",()=>{
+        // ocon.textContent="orderlist"
+         /*let ocard=document.createElement("div")
+         ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+         let oimg=document.createElement("img")
+         oimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+         let opname=document.createElement("h1")
+         let odivamt=document.createElement("div")
+         odivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+         let osym=document.createElement("p")
+         let oamt=document.createElement("p")
+         
+         let oinput=document.createElement("p")
+         //oinput.min=1;
+         //oinput.value=1;
+         oinput.setAttribute("type","number")
+         oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+         let op=document.createElement("p")
+         op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+         oimg.src=cimg.src
+         opname.textContent=cpname.textContent
+         oamt.textContent="₹."+camt.textContent
+         oinput.textContent="Qty:"+cinput.value
+         op.textContent=cp.textContent
+         ocard.appendChild(oimg);
+         ocard.appendChild(opname);
+         odivamt.appendChild(osym);
+         odivamt.appendChild(oamt);
+         ocard.appendChild(odivamt);
+         ocard.appendChild(oinput)
+         ocard.appendChild(op)
+         ocon.appendChild(ocard)
+          bodyt[0].appendChild(ocon)
+         */
+         let ocard=document.createElement("div")
+         ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+        let rrbtn=document.createElement("button")
+         rrbtn.setAttribute("class", "fa fa-trash");
+         rrbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+         rrbtn.addEventListener("click",()=>{
+          ocard.remove()
+         })
+         let oinput=document.createElement("p")
+         oinput.setAttribute("type","number")
+         oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+         oinput.textContent="Qty:"+cinput.value
+         let op=document.createElement("p")
+         op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+         op.textContent=cp.textContent
+         ocard.appendChild(cimg)
+         ocard.appendChild(cpname)
+         ocard.appendChild(cdivamt)
+         ocard.appendChild(oinput)
+         ocard.appendChild(op)
+         ocard.appendChild(rrbtn)
+         ocon.appendChild(ocard)
+         bodyt[0].appendChild(ocon)
+         
+         // let isClicked = false;
+       //   if (!isClicked) {
+            //a3c.innerHTML =parseInt(a3c.innerHTML) + 1
+            //a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);    
+            a2c.innerHTML =0
+           ccall.remove()
+            btn1.disabled=false
+          
+            
+         // }
+        })
+       
+        ccard.appendChild(cimg);
+        ccard.appendChild(cpname);
+        cdivamt.appendChild(csym);
+        cdivamt.appendChild(camt);
+        ccard.appendChild(cdivamt);
+        ccard.appendChild(cinput)
+        ccard.appendChild(cp)
+        ccard.appendChild(cbtn);
+       
+        ccall.appendChild(ccard);
+        ccon.appendChild(ccall) 
+        ccon.appendChild(tcard) 
+        btnd.appendChild(obtn) 
+        btnd.appendChild(rbtn) 
+        ccon.appendChild(btnd) 
+        bodyt[0].appendChild(ccon);
+    
+       let isClicked = false;
+       if (!isClicked) {
+        alert(pname.textContent + "---Sucessfully Added✔️✔️✔️");
+
+        btn1.disabled = true;
+       a2c.innerHTML = parseInt(a2c.innerHTML) + 1;
+       
+      } 
+
+   
+   })
+  }   
+  else if(item.category==="Vegetable"){
+    const card = document.createElement("div");
+    card.setAttribute("id", "con");
+    card.style.backgroundColor = "yellow";
+    card.setAttribute(
+      "style",
+      "transition:all 1s;margin:10px;background:white;width: 150px;border-radius:30px;overflow:hidden"
+    );
+    card.classList.add("card");
+   
+    let img = document.createElement("img");
+    img.setAttribute("src", item.url);
+    img.id = "img1";
+    img.setAttribute("style", "height: 130px; width: 100%;");
+    let pname = document.createElement("h3");
+    pname.setAttribute("id", "pn");
+    pname.setAttribute("style", "color:red;font-weight:bold");
+    let amt = document.createElement("p");
+    amt.id = "amt1";
+
+    let divamt = document.createElement("div");
+    divamt.setAttribute(
+      "style",
+      "display:flex;font-size:20px;font-weight:bold"
+    );
+    let sy = document.createElement("p");
+    var btn1 = document.createElement("button");
+    btn1.setAttribute(
+      "style",
+      "width:100%;background-color:green;font-size:30px"
+    );
+    btn1.id = "b1";
+    pname.textContent = item.name;
+    pname.id = "pn1";
+    amt.textContent = item.amount;
+   
+    btn1.setAttribute("class", item.bname);
+    sy.textContent = item.sym;
+    card.addEventListener("mouseover", () => {
+      card.style.transform = `rotateY(${360}deg)`;
+      //card.style.transform=`translateY(${-20}px)`
+     // card.style.borderRadius="100%"
+    });
+    card.addEventListener("mouseout", () => {
+      //card.style.transform=`translateY(${0}px)`
+      card.style.transform = `rotateY(${0}deg)`;
+     // card.style.borderRadius="30px"
+    });
+    card.appendChild(img);
+    card.appendChild(pname);
+    divamt.appendChild(sy);
+    divamt.appendChild(amt);
+    card.appendChild(divamt);
+    card.appendChild(btn1);
+
+    Vdiv.appendChild(card);
+    Vcon.appendChild(vh1);
+    Vcon.appendChild(Vdiv);
+    bodyt[0].appendChild(Vcon);
+    
+  
+   btn1.addEventListener("click", () => {
+    let ccall=document.createElement("div")
+    ccall.setAttribute("style","background:green")
+     
+    let ccard=document.createElement("div")
+        ccard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+        let cimg=document.createElement("img")
+        cimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+        let cpname=document.createElement("h1")
+        let cdivamt=document.createElement("div")
+        cdivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+        let csym=document.createElement("p")
+        let camt=document.createElement("p")
+      
+        let cinput=document.createElement("input")
+        cinput.min=1;
+        cinput.value=1;
+        cinput.setAttribute("type","number")
+        cinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+        let cpdiv=document.createElement("div")
+        cpdiv.setAttribute("style","display:flex")
+        let cpsym=document.createElement("p")
+        cpsym.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+        cpsym.textContent="₹."
+        let cp=document.createElement("p")
+      cp.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+        let cbtn=document.createElement("button")
+        cbtn.setAttribute("class", "fa fa-trash");
+        cbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+        cbtn.addEventListener("click",()=>{
+            ccard.remove();
+            let isClicked=false
+             if(!isClicked){
+              alert("Confirm to Remove 🤔❓");
+              btn1.disabled =false;
+              a2c.innerHTML = parseInt(a2c.innerHTML) - 1;
+            }
+        })
+             
+        function ChangeCP(){
+        let i = parseInt(cinput.value);
+        let amount = parseInt(camt.textContent);
+     
+        if(i>0 ){
+          cp.textContent=amount*i
+          //console.log(cdivamt.length)
+         
+          //total=to.textContent
+        }
+        else if(i=null){
+          i.value=1
+        }
+        
+       
+      }
+      cinput.addEventListener("input",ChangeCP)
+      
+       
+        ChangeCP();
+       /* function changetp(){
+          let i = parseInt(cinput.value);
+          let amount = parseInt(camt.textContent);
+          let total=parseInt(t.textContent)
+          for(g of amount){
+
+          }
+        }
+        t.addEventListener(ch)*/
+        cimg.src=img.src;
+        cpname.textContent=pname.textContent;
+        csym.textContent=sy.textContent;
+        camt.textContent=amt.textContent;
+        cp.textContent=camt.textContent
+      
+       rbtn.addEventListener("click",()=>{
+            ccall.remove();
+            let isClicked = false;
+            if (!isClicked) {
+              
+             btn1.disabled = false;
+            a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);
+            a2c.innerHTML = 0
+            }
+        })
+        obtn.addEventListener("click",()=>{
+         
+         // ocon.textContent="orderlist"
+        /* let ocard=document.createElement("div")
+         ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+         let oimg=document.createElement("img")
+         oimg.setAttribute("style","border-radius:50%;height:100px;width:100px")
+         let opname=document.createElement("h1")
+         let odivamt=document.createElement("div")
+         odivamt.setAttribute("style","display:flex;font-size:30px;font-weight:bold")
+         let osym=document.createElement("p")
+         let oamt=document.createElement("p")
+         
+         let oinput=document.createElement("p")
+         //oinput.min=1;
+         //oinput.value=1;
+         oinput.setAttribute("type","number")
+         oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+         let op=document.createElement("p")
+       
+         op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+   
+         oimg.src=cimg.src
+         opname.textContent=cpname.textContent
+         oamt.textContent="₹."+camt.textContent
+         oinput.textContent="Qty:"+cinput.value
+         op.textContent=cp.textContent
+         ocard.appendChild(oimg);
+         ocard.appendChild(opname);
+         odivamt.appendChild(osym);
+         odivamt.appendChild(oamt);
+         ocard.appendChild(odivamt);
+         ocard.appendChild(oinput)
+         ocard.appendChild(op)
+         ocon.appendChild(ocard)
+          bodyt[0].appendChild(ocon)
+     
+        if (!isClicked) {
+          
+         // a3c.textContent =parseInt(a3c.textContent) + 1
+          a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);    
+          a2c.innerHTML =0
+          ccard.remove()
+        
+          btn1.disabled=false
+        
+            a3c.textContent = parseInt(a3c.textContent) + 1;
+            
+         }
+         else if(a3c.textContent!="0"){
+          a3c.innerHTML =  (ocard.length);
+         }*/
+         let ocard=document.createElement("div")
+         ocard.setAttribute("style","margin:10px auto;width:800px;background:yellow;padding: 10px;display:flex;justify-content:space-between;align-items:center;")
+        let rrbtn=document.createElement("button")
+         rrbtn.setAttribute("class", "fa fa-trash");
+         rrbtn.setAttribute("style","padding:10px;font-size:40px;color:red;background:none;border:none");
+         rrbtn.addEventListener("click",()=>{
+          ocard.remove()
+         })
+         let oinput=document.createElement("p")
+         oinput.setAttribute("type","number")
+         oinput.setAttribute("style","height:50px;width:100px;font-size:30px;padding:10px;font-weight:bold")
+         oinput.textContent="Qty:"+cinput.value
+         let op=document.createElement("p")
+         op.setAttribute("style","font-size:30px;font-weight:bold;color:green")
+         op.textContent=cp.textContent
+         ocard.appendChild(cimg)
+         ocard.appendChild(cpname)
+         ocard.appendChild(cdivamt)
+         ocard.appendChild(oinput)
+         ocard.appendChild(op)
+         ocard.appendChild(rrbtn)
+         ocon.appendChild(ocard)
+         bodyt[0].appendChild(ocon)
+         
+         // let isClicked = false;
+       //   if (!isClicked) {
+            //a3c.innerHTML =parseInt(a3c.innerHTML) + 1
+            //a2c.innerHTML = parseInt(a2c.innerHTML) - (ccard.length);    
+            a2c.innerHTML =0
+           ccall.remove()
+            btn1.disabled=false
+          
+            
+         // }
+        
+        })
+     //  console.log(cp.textContent)
+       function changetp(){
+        let i = parseInt(cinput.value);
+        let amount = parseInt(camt.textContent);
+        let cpv=parseInt(cp.textContent).toFixed(3)
+        let total=0
+        let sum=""
+        console.log(cpv)
+        for(g of cpv){
+        sum=parseInt(total)+parseInt(g)
+        
+        }
+        t.textContent=sum
+      }
+      t.addEventListener("change",changetp)
+      changetp()
+        ccard.appendChild(cimg);
+        ccard.appendChild(cpname);
+        cdivamt.appendChild(csym);
+        cdivamt.appendChild(camt);
+        ccard.appendChild(cdivamt);
+        ccard.appendChild(cinput)
+        cpdiv.appendChild(cpsym)
+        cpdiv.appendChild(cp)
+        ccard.appendChild(cpdiv)
+        ccard.appendChild(cbtn);
+       
+        ccall.appendChild(ccard);
+        ccon.appendChild(ccall) 
+        tcard.appendChild(tot)
+        tcard.appendChild(t)
+        ccon.appendChild(tcard) 
+        btnd.appendChild(obtn) 
+        btnd.appendChild(rbtn) 
+        ccon.appendChild(btnd) 
+        bodyt[0].appendChild(ccon);
+       
+    
+       let isClicked = false;
+       if (!isClicked) {
+        alert(pname.textContent + "---Sucessfully Added✔️✔️✔️");
+
+        btn1.disabled = true;
+       a2c.innerHTML = parseInt(a2c.innerHTML) + 1;
+       
+      } 
+      //const customChangeEvent = new Event("customchange");
+
+      // Add an event listener to "a3c" for the custom event
+     // a3c.addEventListener("customchange", () => {
+        
+     // });
+    
+
+   })
+   //a3c.textContent =parseInt(a3c.textContent) + ocard.length
+
+  }   
+ // a3c.textContent =parseInt(a3c.textContent) + ocard.length
+
+})
+//a3c.textContent =parseInt(a3c.textContent) + ocard.length
+/////////////
+var tcard=document.createElement("div")
+tcard.setAttribute("style","margin:50px 50px;background:yellow;display:flex;justify-content:space-around")
+var tot = document.createElement("p")
+tot.textContent="total"
+var t = document.createElement("p")
+t.id="tot"
+t.textContent="0"
+var btnd=document.createElement("div")
+btnd.setAttribute("style","gap:50px;display:flex;justify-content:center;")
+var  obtn=document.createElement("Button")
+obtn.textContent="Order"
+obtn.setAttribute("style","background:white;color:black;font-size:40px;padding:10px;border-radius:30px;border:none;outline:none")
+obtn.addEventListener("mouseenter",()=>{
+  obtn.style.scale="1.1"
+ // obtn.style.transition="all 0.8s"
+})
+obtn.addEventListener("mouseout",()=>{
+  obtn.style.scale="1"
+ // obtn.style.transition="all 0.8s"
+})
+var  rbtn=document.createElement("Button")
+rbtn.textContent="Remove All"
+rbtn.setAttribute("style","background:white;color:black;font-size:40px;padding:10px;border-radius:30px;border:none;outline:none")
+rbtn.addEventListener("mouseenter",()=>{
+  rbtn.style.scale="1.1"
+  //rbtn.style.transition="all 0.8s"
+})
+rbtn.addEventListener("mouseout",()=>{
+  rbtn.style.scale="1"
+  //rbtn.style.transition="all 0.8s"
+})
+
+       
+  </script>
+</body>
+</html>
